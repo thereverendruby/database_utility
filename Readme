@@ -1,0 +1,38 @@
+# will not run on "Winders", do not use it or know how to use it, sorry 
+
+# ALLWAYS BACK UP YOUR DATA BEFORE TESTING FOR USE !!
+
+
+# db_utility.rb is a command line tool using DataBaseUtility
+
+# "your_config_name" is the name of the confituration you want to use that is setup in config.rb
+# so you can use the utility against many databases
+
+
+# This a utility that will.......
+
+# dump local a database and compress it to "your_database_name-local-2012-07-03-07-05-21.sql.gz"
+# ./db_utility.rb dump your_config_name
+
+# undump an exitisting "your_database_name-local-2012-07-03-07-05-21.sql.gz"
+# ./db_utility.rb undump your_config_name your_database_name-local-2012-07-03-07-05-21.sql.gz
+
+# get_remote will dump and zip a database on a remote server, the file will land on the local machine
+# "your_database_name-remote-2012-07-03-07-05-21.sql.gz"
+# ./db_utility.rb get_remote your_config_name
+
+# sync_with_remote will create a backup of your local database, then dump the remote data into the local database
+# "your_database_name-sync_backup-2012-07-03-07-05-21.sql.gz"
+# ./db_utility.rb sync_with_remote your_config_name
+
+# you can also use the the library stand alone, just require the database_utility.rb file
+
+# tell it what configuration to use
+# DataBaseUtility.set_configs('your_config_name')
+
+# Then
+
+# DatabaseUtility.dump
+# DatabaseUtility.undump('file_to_undump.sql.gz')
+# DatabaseUtility.get_remote
+# DatabaseUtility.sync_with_remote
